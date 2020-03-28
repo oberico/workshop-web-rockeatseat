@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<!--HTML   
+    Hypertext Markup Language
+    São textos que aceitam links e audio visual
+    Marcação feitas com tags <tags>
+    Linguagem de marcação (não de programação);
+-->
+
+<html><!--Tag HTML-->
+
+    <head><!--Responsável por receber configurações da página-->
+        <meta charset="UTF8">
+        
+        <title>Casa Criativa</title> <!--Titulo da página-->
+
+        <style>
+            /*
+            CSS
+            
+            Cascading StyleSHeet
+            
+            */
+            body{
+                background: #e5e5e5;
+                color: #25282b;
+
+                text-align: center;
+            }
+
+            
+            button{
+                border: none;
+                font-weight: bold;
+                background: none;
+                color:#00D154;
+            }
+
+            .fat{
+                border: none;
+                color:white;
+                background: #00D154;
+            }
+
+            .hide{
+                display: none;
+            }
+
+        </style>
+    
+    
+    
+    </head>
+
+
+    <body>
+        <h1>Casa Criativa</h1>
+        <img src="logo.png" alt="Imagem da Logomarca">
+
+        <p>
+            Ficar em casa em pedíodos longos não deve ser nada fácil.  
+        </p>
+
+        <p>
+            Por isso, iremos catalogar ideias,<strong> jogos, filmes,
+            livros, cursos, dicas </strong>e tudo que for necessário prara tornar esse
+            momento mais interessante.
+        </p>
+
+        <p>
+            Comece clicando em ver ideias para ver as ideias cadastradas e
+            contribua adicionando sua ideia.
+        </p>
+
+        <button>+Adicionar Ideia</button>
+        <button class="fat">Ver Ideia</button>
+
+        <p id="footer">Com ❤ Ramon</p>
+
+
+        <script>
+
+            document
+            .querySelector("button.fat")
+            .addEventListener("click", function(){
+                document
+                    .querySelector("#footer ")
+                    .classList
+                    .toggle("hide")
+
+            })
+
+
+        </script>
+
+    </body>
+
+
+
+
+</html>
