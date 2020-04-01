@@ -10,8 +10,7 @@
         Positioning 
 */
 
-
-
+/*Global*/
 body{
     background: #e5e5e5;
     color: #25282b;
@@ -21,15 +20,10 @@ body{
     margin: 0;
 }
 
-#container {
-    width: 90%;
-    max-width: 980px;
-    
-    margin: 40px auto;
-
-    display: flex;  
-
+body.hideScroll{
+    overflow: hidden;
 }
+
 
 a{
     color: #00D154;
@@ -47,10 +41,47 @@ p, .description{
     letter-spacing: 0.1px;
 }
 
+.button:hover{
+    background-color: #ffcd2b;
+    text-decoration: none;
+}
+
+.button{
+    color:white;
+    background: #00D154;
+
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px #25282b32;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* Padrão */
+#container {
+    width: 90%;
+    max-width: 980px;
+    
+    margin: 40px auto;
+
+    display: flex;  
+
+}
+
+
 #intro {
     width: 300px;
 
-    margin-right: 20px;
+    margin-right: 48px;
 }
 
 #intro img{
@@ -89,21 +120,6 @@ button{
 
 button:hover{
     text-decoration: underline;
-}
-
-button.fat:hover{
-    text-decoration: none;
-}
-
-button.fat{
-    color:white;
-    background: #00D154;
-
-    width: 150px;
-    height: 40px;
-
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px #25282b32;
 }
 
 footer{
@@ -162,10 +178,11 @@ footer a{
 
     position: absolute;
     top: 0;
-
-    width: 100vw;
-    height: 100vh;
-
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    
     display: flex;
     justify-content: center;
 
@@ -173,8 +190,12 @@ footer a{
 
 }
 
+#modal.addScroll{
+    overflow: auto;
+}
+
 #modal .content{
-    margin-top: 32px;
+    margin-top: 2%;
 
     color: white;
 }
@@ -188,7 +209,7 @@ footer a{
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 6%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -283,4 +304,76 @@ form button:hover{
     opacity: 0;
     visibility: hidden;
     
+}
+
+/* ideias.html */
+#page-ideias #container{
+    display: block;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+#page-ideias nav li{
+    list-style-type: none;
+
+    margin-right: 12px;
+}
+
+#page-ideias nav li a{
+    color: #25282b;
+}
+
+#page-ideias nav li a.button{
+    color: white;
+}
+
+#page-ideias nav li:last-child{
+    margin: 0;
+
+}
+
+
+section#title{
+    text-align: center;
+
+}
+
+section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1{
+    margin: 0;
+
+    font-size: 28px;
+}
+
+section#ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+section#ideas .idea{
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer{
+    margin-top: 48px;
 }
